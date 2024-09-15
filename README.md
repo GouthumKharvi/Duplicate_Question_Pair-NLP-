@@ -53,9 +53,37 @@ Feature engineering is an essential step to extract more relevant features from 
 ### Modeling
 The dataset is transformed using the BoW vectorizer, and a **RandomForestClassifier** is trained using the extracted features. For every 30,000 rows, 3,000 BoW features for `question1` and 3,000 BoW features for `question2` were created, resulting in a total of 6,007 features (6,000 from BoW and 7 from feature engineering).
 
-### Installation
-To set up and run this project, follow these steps:
+### Usage
+Once you have the project set up, you can run the **Streamlit app** to check for duplicate questions.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/duplicate-question-pairs.git
+#### Start the Streamlit app:
+```bash
+streamlit run app.py
+
+Open the URL displayed in the terminal (usually http://localhost:8501) to interact with the app. You can enter two questions, and the app will predict whether they are duplicates.
+
+
+├── app.py                 # Streamlit app for duplicate question detection
+├── cv.pkl                 # Pickled BoW vectorizer model
+├── helper.py              # Helper functions for preprocessing and feature engineering
+├── model.pkl              # Pickled RandomForestClassifier model
+├── Procfile               # For Heroku deployment
+├── requirements.txt       # Required dependencies
+├── setup.sh               # Shell script for Heroku deployment
+└── README.md              # Project documentation
+
+
+### Results and Conclusion
+The model was trained on a large dataset using the **Bag of Words (BoW)** technique along with engineered features. The **RandomForestClassifier** achieved promising results, effectively identifying duplicate questions in most cases.
+
+#### Conclusion:
+- The **Bag of Words (BoW)** approach, combined with **RandomForestClassifier**, provided a robust solution for identifying duplicate questions.
+- Although BoW lacks the ability to capture word order and context, the additional feature engineering helped improve accuracy.
+- Future improvements could include using more advanced NLP techniques such as **TF-IDF** or transformer-based models like **BERT** to capture semantic similarities between the questions better.
+
+### Future Work
+- Implement advanced NLP techniques like **TF-IDF**, **Word2Vec**, or **BERT** for more accurate predictions.
+- Optimize the model by hyperparameter tuning and feature selection.
+- Deploy the app on cloud platforms like **Heroku** for wider accessibility.
+
+
