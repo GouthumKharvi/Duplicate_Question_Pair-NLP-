@@ -59,6 +59,7 @@ Once you have the project set up, you can run the **Streamlit app** to check for
 #### Start the Streamlit app:
 ```bash
 streamlit run app.py
+```
 
 Open the URL displayed in the terminal (usually http://localhost:8501) to interact with the app. You can enter two questions, and the app will predict whether they are duplicates.
 
