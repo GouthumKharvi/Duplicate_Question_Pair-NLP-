@@ -62,7 +62,7 @@ streamlit run app.py
 ```
 
 Open the URL displayed in the terminal (usually http://localhost:8501) to interact with the app. You can enter two questions, and the app will predict whether they are duplicates.
-
+```
 
 ├── app.py                 # Streamlit app for duplicate question detection
 ├── cv.pkl                 # Pickled BoW vectorizer model
@@ -72,6 +72,7 @@ Open the URL displayed in the terminal (usually http://localhost:8501) to intera
 ├── requirements.txt       # Required dependencies
 ├── setup.sh               # Shell script for Heroku deployment
 └── README.md              # Project documentation
+```
 
 
 ### Results and Conclusion
